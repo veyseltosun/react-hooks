@@ -1,6 +1,8 @@
 import React from "react";
+import { useState } from "react";
 
 const TodoList = () => {
+    cosnt [todos, setTodo] = useState()
     return(
         <div>
             <ul>
