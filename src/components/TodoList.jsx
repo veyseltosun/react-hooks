@@ -8,6 +8,14 @@ const TodoList = () => {
         {text: "Feed the dog", id: 3},
     ])
 
+    const addTodo = () => {
+        
+        setTodos([
+            ...todos, 
+            { text: "Learn hooks", id: Math.random() }
+        ]);
+    }
+
     return(
         <div>
             <ul>
@@ -18,6 +26,7 @@ const TodoList = () => {
                     )
                 })}
             </ul>
+            <button onClick={addTodo}> Add a todo </button>
         </div>
     )
 }
