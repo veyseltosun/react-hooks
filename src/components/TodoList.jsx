@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 const TodoList = () => {
-    const [todos, setTodo] = useState([
+    const [todos, setTodos] = useState([
         {text: "Pay the bills", id: 1},
         {text: "Do your homework", id: 2},
         {text: "Feed the dog", id: 3},
@@ -11,9 +11,14 @@ const TodoList = () => {
     return(
         <div>
             <ul>
-                <li>Pay bills</li>
-                <li>Do your home work</li>
-                <li>Feed the dog</li>
+                {todos.map((todo) => { 
+                    const {id, text} = todo;
+
+                    return(
+                        <li key={id}>{text}</li>
+
+                    )
+                })}
             </ul>
         </div>
     )
