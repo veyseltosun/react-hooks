@@ -2,7 +2,12 @@ import React from "react";
 import { useState } from "react";
 
 const TodoList = () => {
-    cosnt [todos, setTodo] = useState()
+    const [todos, setTodo] = useState([
+        {text: "Pay the bills", id: 1},
+        {text: "Do your homework", id: 2},
+        {text: "Feed the dog", id: 3},
+    ])
+
     return(
         <div>
             <ul>
