@@ -13,10 +13,8 @@ const TodoList = () => {
             <ul>
                 {todos.map((todo) => { 
                     const {id, text} = todo;
-
                     return(
                         <li key={id}>{text}</li>
-
                     )
                 })}
             </ul>
